@@ -11,4 +11,11 @@
         <maven.compiler.target>20</maven.compiler.target>
         <exec.mainClass>com.se470.assigntrack.AssignTrack</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.mnode.ical4j</groupId>
+            <artifactId>ical4j</artifactId>
+            <version>3.0.27</version> <!-- Use the latest version -->
+        </dependency>
+    </dependencies>
 </project>
