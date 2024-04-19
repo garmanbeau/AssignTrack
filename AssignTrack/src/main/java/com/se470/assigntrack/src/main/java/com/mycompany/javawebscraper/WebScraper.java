@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.javawebscraper;
+package com.se470.assigntrack.src.main.java.com.mycompany.javawebscraper;
 
 /**
  *
@@ -32,7 +32,7 @@ public class WebScraper {
         WebDriver driver;
         // Choose the WebDriver based on the browser choice
         if (browser.equals("Chrome")) {
-            System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\garma\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
             driver = new ChromeDriver();
         } else {
             driver = new SafariDriver(); // Default to Safari
@@ -60,7 +60,7 @@ public class WebScraper {
             for (WebElement assignmentElement : assignmentsList) {
                 WebElement content = assignmentElement.findElement(By.className("d2l-datalist-item-content"));
                 String title = content.getAttribute("title");
-                String className = content.findElement(By.cssSelector("div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > .d2l-offscreen")).getText();
+                String className = content.findElement(By.cssSelector(".d2l-le-calendar-dot-circle")).getAttribute("title");
                 String dueDate = content.findElement(By.cssSelector("div:nth-child(1) > div:nth-child(2) > div:nth-child(1)")).getText();
 
                 Map<String, String> assignment = new HashMap<>();
