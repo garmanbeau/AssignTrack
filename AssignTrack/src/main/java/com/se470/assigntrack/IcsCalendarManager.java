@@ -32,11 +32,19 @@ public class IcsCalendarManager {
         calendar.getProperties().add(Version.VERSION_2_0);
     }
 
-    public void addEvent(String title, DateTime startDate, DateTime endDate) {
-        VEvent event = new VEvent(startDate, endDate, title);
-        event.getProperties().add(new Uid(UUID.randomUUID().toString()));
-        calendar.getComponents().add(event);
-    }
+    public void addEvent(String title, DateTime endDate, String details) {
+
+    DateTime startDate = endDate;
+
+    VEvent event = new VEvent(startDate, endDate, title);
+    event.getProperties().add(new Uid(UUID.randomUUID().toString()));
+    
+    // Add the details as a DESCRIPTION property
+    event.getProperties().add(new Description(details));
+
+    calendar.getComponents().add(event);
+}
+
 
     public void generateAndSaveIcsFile(String filePath) {
         try {
@@ -50,9 +58,6 @@ public class IcsCalendarManager {
             System.out.println("Generated .ics file saved at: " + filePath);
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Manager print");
-
-            // Handle exceptions (e.g., file I/O errors)
         }
     }
 }

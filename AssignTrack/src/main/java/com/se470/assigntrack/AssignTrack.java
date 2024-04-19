@@ -18,25 +18,32 @@ public class AssignTrack {
 
     public static void main(String[] args) {
 
-//        IcsCalendarManager calendarManager = new IcsCalendarManager();
-//
-//        // Parse dates using SimpleDateFormat
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-//        try {
-//            Date startDate = dateFormat.parse("2024-04-01T10:00:00");
-//            Date endDate = dateFormat.parse("2024-04-01T12:00:00");
-//
-//            DateTime start = new DateTime(startDate);
-//            DateTime end = new DateTime(endDate);
-//
-//            calendarManager.addEvent("Sample Event", start, end);
-//            calendarManager.generateAndSaveIcsFile("C:\\Users\\garma\\Downloads\\my_events.ics");
-//        } catch (Exception e) {
-//                        System.out.println("Main print");
-//
-//            e.printStackTrace();
-//        }
+        IcsCalendarManager calendarManager = new IcsCalendarManager();
 
+        // Parse dates using SimpleDateFormat
+        SimpleDateFormat inputFormat = new SimpleDateFormat("MMM d, yyyy hh:mm a");
+        SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        
+        DateTime start = dateConverter("Feb 28, 2024 10:00 AM");
 
+            calendarManager.addEvent("Sample Event", start, "Class Software Class");
+            calendarManager.generateAndSaveIcsFile("C:\\Users\\garma\\Downloads\\my_events.ics");
+        
     }
+        public static DateTime dateConverter(String inputDate){
+            SimpleDateFormat inputFormat = new SimpleDateFormat("MMM d, yyyy hh:mm a");
+            SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        try {
+            Date input = inputFormat.parse(inputDate);
+            String output = outputFormat.format(input);
+
+            Date outputDate = outputFormat.parse(output);
+            DateTime start = new DateTime(outputDate);
+
+            return start;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+            return null;
+        }
 }

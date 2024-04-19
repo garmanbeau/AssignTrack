@@ -11,17 +11,32 @@ package com.se470.assigntrack.src.main.java.com.mycompany.javawebscraper;
 
 
 
+import com.se470.assigntrack.AssignTrack;
+import com.se470.assigntrack.IcsCalendarManager;
 import javax.swing.*;
 import java.awt.*;
+import net.fortuna.ical4j.model.DateTime;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.Map;
+import java.util.List;
 
 public class App extends JFrame {
     private JTextField userTextField;
     private JPasswordField passwordField;
     private JComboBox<String> browserSelect;
     private JButton submitButton;
-
+    
+    private IcsCalendarManager calendarManager;
+    private String calendarData;
+    
     public App() {
         initUI();
+        
+        calendarManager = new IcsCalendarManager();
+        
         setTitle("Web Scraper");
         setSize(350, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,16 +63,55 @@ public class App extends JFrame {
     }
 
     private void scrapeData() {
-        String username = userTextField.getText();
-        String password = new String(passwordField.getPassword());
-        String browser = (String) browserSelect.getSelectedItem();
-        String data = WebScraper.scrape(username, password, browser);
-        JOptionPane.showMessageDialog(this, "Data scraped: " + data, "Scrape Result", JOptionPane.INFORMATION_MESSAGE);
-        // Clear fields after action
-        userTextField.setText("");
-        passwordField.setText("");
+    String username = userTextField.getText();
+    String password = new String(passwordField.getPassword());
+    String browser = (String) browserSelect.getSelectedItem();
+    String data = WebScraper.scrape(username, password, browser);
+    calendarData = data;
+
+    // Show a confirmation dialog
+    int option = JOptionPane.showConfirmDialog(this, "Scrape Successful! Download File?", "Scrape Result", JOptionPane.YES_NO_OPTION);
+    if (option == JOptionPane.YES_OPTION) {
+        // If the user chooses "Yes", open a file chooser dialog
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int choice = fileChooser.showSaveDialog(this);
+        if (choice == JFileChooser.APPROVE_OPTION) {
+            // If the user selects a directory, generate the .ics file in that directory
+            String path = fileChooser.getSelectedFile().getAbsolutePath() + "\\assignments.ics";
+            generateICSFile(calendarData, path);
+        }
     }
 
+    // Clear fields after action
+    userTextField.setText("");
+    passwordField.setText("");
+}
+
+    private void generateICSFile(String data, String path){
+    // Parse the JSON data
+    JSONArray jsonArray = new JSONArray(data);
+
+    // Iterate over the JSON objects
+    for (int i = 0; i < jsonArray.length(); i++) {
+        JSONObject jsonObject = jsonArray.getJSONObject(i);
+
+        // Extract the Title, Class, and Due Date from the JSON object
+        String title = jsonObject.getString("Title");
+        String details = jsonObject.getString("Class");
+        String dueDateString = jsonObject.getString("Due Date");
+
+        // Convert the Due Date string to a DateTime
+        DateTime endDate = AssignTrack.dateConverter(dueDateString);
+
+        // Add the event to the calendar
+        calendarManager.addEvent(title, endDate, details);
+    }
+
+    // Generate and save the .ics file
+    calendarManager.generateAndSaveIcsFile(path);
+}
+    
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new App().setVisible(true));
     }
