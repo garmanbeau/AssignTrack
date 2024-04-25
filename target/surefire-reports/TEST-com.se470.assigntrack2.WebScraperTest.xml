@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.se470.assigntrack2.WebScraperTest" time="28.975" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.se470.assigntrack2.WebScraperTest" time="34.708" tests="2" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-20\bin"/>
-    <property name="sun.java.command" value="C:\Users\garma\AppData\Local\Temp\surefire10739591507836074160\surefirebooter-20240419230724048_3.jar C:\Users\garma\AppData\Local\Temp\surefire10739591507836074160 2024-04-19T23-07-23_863-jvmRun1 surefire-20240419230724048_1tmp surefire_0-20240419230724048_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\garma\AppData\Local\Temp\surefire3677868707623703212\surefirebooter-20240423110836304_3.jar C:\Users\garma\AppData\Local\Temp\surefire3677868707623703212 2024-04-23T11-08-36_127-jvmRun1 surefire-20240423110836304_1tmp surefire_0-20240423110836304_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.se470.assigntrack2.**.*Test"/>
     <property name="surefire.test.class.path" value="C:\Users\garma\AssignTrack2\target\test-classes;C:\Users\garma\AssignTrack2\target\classes;C:\Users\garma\.m2\repository\org\mnode\ical4j\ical4j\3.0.27\ical4j-3.0.27.jar;C:\Users\garma\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\garma\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\garma\.m2\repository\org\apache\commons\commons-lang3\3.8.1\commons-lang3-3.8.1.jar;C:\Users\garma\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\garma\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\garma\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\garma\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\garma\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\garma\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\garma\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\garma\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\garma\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\garma\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\garma\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\garma\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\garma\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\garma\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\garma\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\garma\.m2\repository\org\openjfx\javafx-controls\17.0.1\javafx-controls-17.0.1.jar;C:\Users\garma\.m2\repository\org\openjfx\javafx-controls\17.0.1\javafx-controls-17.0.1-win.jar;C:\Users\garma\.m2\repository\org\openjfx\javafx-graphics\17.0.1\javafx-graphics-17.0.1.jar;C:\Users\garma\.m2\repository\org\openjfx\javafx-graphics\17.0.1\javafx-graphics-17.0.1-win.jar;C:\Users\garma\.m2\repository\org\openjfx\javafx-base\17.0.1\javafx-base-17.0.1.jar;C:\Users\garma\.m2\repository\org\openjfx\javafx-base\17.0.1\javafx-base-17.0.1-win.jar;C:\Users\garma\.m2\repository\org\openjfx\javafx-fxml\17.0.1\javafx-fxml-17.0.1.jar;C:\Users\garma\.m2\repository\org\openjfx\javafx-fxml\17.0.1\javafx-fxml-17.0.1-win.jar;C:\Users\garma\.m2\repository\org\json\json\20210307\json-20210307.jar;C:\Users\garma\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\garma\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\garma\AppData\Local\Temp\surefire10739591507836074160\surefirebooter-20240419230724048_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\garma\AppData\Local\Temp\surefire3677868707623703212\surefirebooter-20240423110836304_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="20+36-2344"/>
@@ -61,14 +61,100 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="testScrape_Path1" classname="com.se470.assigntrack2.WebScraperTest" time="28.97">
-    <system-err><![CDATA[Starting ChromeDriver 123.0.6312.122 (31f8248cdd90acbac59f700b603fed0b5967ca50-refs/branch-heads/6312@{#824}) on port 30493
+  <testcase name="testScrape_Path1" classname="com.se470.assigntrack2.WebScraperTest" time="22.761">
+    <error message="unexpected alert open: {Alert text : Invalid Username/Password.&#10;&#10;You will be taken back to the login page.}&#10;  (Session info: chrome=124.0.6367.61): Invalid Username/Password.&#10;&#10;You will be taken back to the login page.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;FBI-SURVEILLANC&apos;, ip: &apos;192.168.1.128&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\garma\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54071}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 35f4aa42196b92f1b2424b17b8f6af87" type="org.openqa.selenium.UnhandledAlertException"><![CDATA[org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Invalid Username/Password.
+
+You will be taken back to the login page.}
+  (Session info: chrome=124.0.6367.61): Invalid Username/Password.
+
+You will be taken back to the login page.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'FBI-SURVEILLANC', ip: '192.168.1.128', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\garma\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54071}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 35f4aa42196b92f1b2424b17b8f6af87
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at com.se470.assigntrack2.WebScraper.scrape(WebScraper.java:66)
+	at com.se470.assigntrack2.WebScraperTest.testScrape_Path1(WebScraperTest.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
+    <system-err><![CDATA[Starting ChromeDriver 123.0.6312.122 (31f8248cdd90acbac59f700b603fed0b5967ca50-refs/branch-heads/6312@{#824}) on port 37423
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Apr 19, 2024 11:07:26 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1713888518.274][WARNING]: This version of ChromeDriver has not been tested with Chrome version 124.
+Apr 23, 2024 11:08:38 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="testScrape_Path2" classname="com.se470.assigntrack2.WebScraperTest" time="0.004"/>
+  <testcase name="testScrape_Path2" classname="com.se470.assigntrack2.WebScraperTest" time="11.945">
+    <system-err><![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'FBI-SURVEILLANC', ip: '192.168.1.128', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
+	at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
+	at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+	at com.se470.assigntrack2.WebScraper.scrape(WebScraper.java:42)
+	at com.se470.assigntrack2.WebScraperTest.testScrape_Path2(WebScraperTest.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></system-err>
+  </testcase>
 </testsuite>

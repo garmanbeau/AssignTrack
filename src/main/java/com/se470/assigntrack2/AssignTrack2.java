@@ -60,6 +60,7 @@ public class AssignTrack2 extends JFrame {
     String data = WebScraper.scrape(username, password, browser);
     calendarData = data;
 
+    if (calendarData != "" && calendarData != null){
     // Show a confirmation dialog
     int option = JOptionPane.showConfirmDialog(this, "Scrape Successful! Download File?", "Scrape Result", JOptionPane.YES_NO_OPTION);
     if (option == JOptionPane.YES_OPTION) {
@@ -72,6 +73,7 @@ public class AssignTrack2 extends JFrame {
             String path = fileChooser.getSelectedFile().getAbsolutePath() + "\\assignments.ics";
             generateICSFile(calendarData, path);
         }
+    }
     }
 
     // Clear fields after action

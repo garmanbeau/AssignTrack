@@ -4,7 +4,11 @@ package com.se470.assigntrack2;
  *
  * @author travisloukusa
  */
-
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import javax.swing.JOptionPane;
 
 import com.google.gson.Gson;
 import org.openqa.selenium.By;
@@ -27,12 +31,23 @@ public class WebScraper {
     public static String scrape(String user, String password, String browser) {
         WebDriver driver;
         // Choose the WebDriver based on the browser choice
-        if (browser.equals("Chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\garma\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
-            driver = new ChromeDriver();
-        } else {
-            driver = new SafariDriver(); // Default to Safari
+        try {
+            if (browser.equals("Chrome")) {
+                // Set the ChromeDriver path and initialize the driver...
+                String chromeDriverPath = "resources/chromedriver.exe";
+                System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+                driver = new ChromeDriver();
+            } else {
+                // Initialize the SafariDriver...
+                driver = new SafariDriver();
+            }
+         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Browser not found. Please ensure you choose the correct browser.", "Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+            throw e;
         }
+        
+        
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         try {
@@ -76,8 +91,8 @@ public class WebScraper {
     }
 
     //public static void main(String[] args) {
-        // Example usage with username, password, and browser type
-        //String data = scrape("yourUsername", "yourPassword", "Chrome");
-       // System.out.println(data);
-   // }
+    // Example usage with username, password, and browser type
+    //String data = scrape("yourUsername", "yourPassword", "Chrome");
+    // System.out.println(data);
+    // }
 }
